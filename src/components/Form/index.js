@@ -2,6 +2,7 @@
 // == Import : npm
 import React from 'react';
 import { Button, Form as FormSemanticUi, Segment } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
 
 // == Import : local
 

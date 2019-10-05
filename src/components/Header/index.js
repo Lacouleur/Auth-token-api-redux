@@ -1,13 +1,12 @@
 import React from 'react';
-import Nav from 'src/containers/Header/Nav';
+import Nav from './Nav';
+
 
 import {
   Segment,
   Header as HeaderSemanticUi,
   Icon,
 } from 'semantic-ui-react';
-
-import Nav from './Nav';
 
 const Header = () => (
   <Segment as="header" inverted>

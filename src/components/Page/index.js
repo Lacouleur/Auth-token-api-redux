@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Route, Redirect, Switch } from 'react-router-dom';
 
 import Form from 'src/containers/Form';
-import Welcome from 'src/components/Welcome';
+import Welcome from 'src/containers/Welcome';
 import About from 'src/components/About';
 import Search from 'src/components/Search';
 
