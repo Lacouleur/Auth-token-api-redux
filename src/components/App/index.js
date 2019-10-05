@@ -1,3 +1,15 @@
+/** #############################
+
+ ->  plan d'action <-
+ * x inté statique
+ * x premières props statique
+ * O gérer les routes
+ * - gérer la connexion
+ * - gérer la recherche
+ * 
+
+#############################*/
+
 // == Import : npm
 import React from 'react';
 import { Container } from 'semantic-ui-react';
@@ -10,7 +22,7 @@ import Page from 'src/components/Page';
 const App = () => (
   <Container>
     <Header />
-    <Page logged={false}/>
+    <Page logged={true}/>
   </Container>
 );
 
