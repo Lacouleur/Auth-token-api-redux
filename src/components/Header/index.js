@@ -1,4 +1,6 @@
 import React from 'react';
+import Nav from 'src/containers/Header/Nav';
+
 import {
   Segment,
   Header as HeaderSemanticUi,
@@ -16,7 +18,7 @@ const Header = () => (
         Find your favorites repositories
       </HeaderSemanticUi.Subheader>
     </HeaderSemanticUi>
-    <Nav logged={true} />
+    <Nav />
   </Segment>
 );
 
