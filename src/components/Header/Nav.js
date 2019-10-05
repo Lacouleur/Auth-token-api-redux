@@ -8,16 +8,18 @@ const Nav = ({ logged }) => (
     <Menu.Item as={NavLink} exact to="/">
       Accueil
     </Menu.Item>
+
+    <Menu.Item as={NavLink} exact to="/about">
+    À propos
+    </Menu.Item>
+
     {logged && (
         // on ne peut pas spécifier des élements jsx voisins directement, il faut un parent
         // ici on met un fragment, comme ça il n'y a pas d'impact dans le dom réel
         <>
-          <Menu.Item as={NavLink} exact to="/about">
-            À propos
-          </Menu.Item>
-          <Menu.Item as={NavLink} exact to="/search">
+        <Menu.Item as={NavLink} exact to="/search">
             Recherche
-          </Menu.Item>
+        </Menu.Item>
         </>
       )}
   </Menu>
