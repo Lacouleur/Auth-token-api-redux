@@ -15,7 +15,7 @@ const rootComponent = (
   <Provider store={store}>
   <BrowserRouter>
     <App />
-  </BrowserRouter>
+  </BrowserRouter>S
   </Provider>
 );
 

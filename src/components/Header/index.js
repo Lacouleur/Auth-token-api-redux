@@ -16,7 +16,7 @@ const Header = () => (
         Find your favorites repositories
       </HeaderSemanticUi.Subheader>
     </HeaderSemanticUi>
-    <Nav />
+    <Nav logged={true} />
   </Segment>
 );
 
