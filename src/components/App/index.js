@@ -1,15 +1,19 @@
 // == Import : npm
 import React from 'react';
+import { Container } from 'semantic-ui-react';
 
 // == Import : local
-import './app.scss';
+import Header from 'src/components/Header';
+import Page from 'src/components/Page';
 
 // == Composant
 const App = () => (
-  <div id="app">
-    App React
-  </div>
+  <Container>
+    <Header />
+    <Page />
+  </Container>
 );
+
 
 // == Export
 export default App;
