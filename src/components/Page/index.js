@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Route } from 'react-router-dom';
 
 import Form from 'src/components/Form';
 import Welcome from 'src/components/Welcome';
@@ -14,9 +15,15 @@ const Page = ({ logged }) => (
   )}
   {logged && (
     <>
-      <Welcome />
-      <About />
-      <Search />
+    <Route path="/" exact>
+        <Welcome />
+    </Route>
+    <Route path="/about" exact>
+        <About />
+    </Route>
+    <Route path="/search" exact>
+        <Search />
+    </Route>
     </>
   )}
 
