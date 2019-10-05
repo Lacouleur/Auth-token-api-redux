@@ -22,7 +22,7 @@ import Page from 'src/components/Page';
 const App = () => (
   <Container>
     <Header />
-    <Page logged={true}/>
+    <Page logged={false}/>
   </Container>
 );
 
