@@ -10,7 +10,7 @@ import Page from 'src/components/Page';
 const App = () => (
   <Container>
     <Header />
-    <Page />
+    <Page logged={false}/>
   </Container>
 );
 
