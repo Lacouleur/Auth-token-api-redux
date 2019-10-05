@@ -8,15 +8,9 @@ const ajaxMiddleware = (store) => (next) => (action) => {
     case CONNECT_USER: {
       const state = store.getState();
       const token = state.form.tokenInput;
-
-      /* ici on veut intérroger une route privée, c'est à dire une url de notre api qui nécessite 
-      * un niveau d'accès sufffisant, n'importe qui ne pourra pas lire les infos de mon compte
-      * pour dire qui je suis, j'ai récupéré un token, c'est une chaine de caractères qui permet au 
-      * serveur back de me reconnaitre, quand je fais une fais un requete au serveur, je peux lui 
-      *trnasmettre ce token, cette carte d'identité.
-      * pour cela ici avec l'api github on a due transmettre le token via les entêtes de la requetes
-      */
-
+      // ici on veut intérroger une route privée, c'est à dire une url de notre api qui nécessite un niveau d'accès sufffisant, n'importe qui ne pourra pas lire les infos de mon compte
+      // pour dire qui je suis, j'ai récupéré un token, c'est une chaine de caractères qui permet au serveur back de me reconnaitre, quand je fais une fais un requete au serveur, je peux lui trnasmettre ce token, cette carte d'identité
+      // pour cela ici avec l'api github on a du transmettre le token via les entêtes de la requetes
       axios.get('https://api.github.com/user', {
         headers: {
           Authorization: `token ${token}`,

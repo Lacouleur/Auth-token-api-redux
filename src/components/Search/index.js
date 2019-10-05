@@ -1,8 +1,8 @@
 import React from 'react';
 import { Segment, Header } from 'semantic-ui-react';
 
+import Results from 'src/containers/Search/Results';
 import InputSearch from './InputSearch';
-import Results from './Results';
 
 const Search = () => (
   <Segment as="main">

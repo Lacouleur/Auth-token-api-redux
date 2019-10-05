@@ -8,33 +8,30 @@ import About from 'src/components/About';
 import Search from 'src/components/Search';
 
 const Page = ({ logged }) => (
-    <Switch>
-
-        <Route path="/" exact>
-            {!logged && <Form />}
-            {logged && <Welcome />}
-        </Route>
-        <Route path="/about" exact>
-            <About />
-        </Route>
-
+  <Switch>
+    <Route path="/" exact>
+      {!logged && <Form />}
+      {logged && <Welcome />}
+    </Route>
+    <Route path="/about" exact>
+      <About />
+    </Route>
     {logged && (
-        <Route path="/search" exact>
-            <Search />
-        </Route>
-        )}
+      <Route path="/search" exact>
+        <Search />
+      </Route>
+    )}
     {!logged && <Redirect to="/" />}
-
     {logged && (
-        <Route>
-            <div>Page non trouvée</div>
-        </Route>
+      <Route>
+        <div>Page non trouvée</div>
+      </Route>
     )}
   </Switch>
 );
 
 Page.propTypes = {
-    logged: PropTypes.bool.isRequired,
-  };
+  logged: PropTypes.bool.isRequired,
+};
 
 export default Page;

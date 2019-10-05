@@ -1,12 +1,23 @@
 import React from 'react';
 import { Card } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
 
-const Results = () => (
+import Repo from 'src/containers/Search/Repo';
+
+const Results = ({ repos }) => (
   <Card.Group>
-    <Card fluid color="yellow" header="Repo 1" />
-    <Card fluid color="yellow" header="Repo 2" />
-    <Card fluid color="yellow" header="Repo 3" />
+    {repos.map((repo) => (
+      <Repo {...repo} key={repo.id} />
+    ))}
   </Card.Group>
 );
+
+Results.propTypes = {
+  repos: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
+  ).isRequired,
+};
 
 export default Results;
