@@ -1,20 +1,21 @@
 // - initialState
+// token : 63535622ff913a1c37312859b1be50666de3008e
 const initialState = {
-  tokenInput: '',
-  InputSearch: '',
+  inputValue: '',
+  loading : true,
 };
 
 // - Actions Types
-const CHANGE_INPUT = 'CHANGE_INPUT';
-export const CONNECT_USER = 'CONNECT_USER';
+const CHANGE_VALUE = 'CHANGE_VALUE';
+
 
 // - Reducer
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case CHANGE_INPUT:
+    case CHANGE_VALUE:
       return {
         ...state,
-        tokenInput: action.value,
+        inputValue : action.value,
       };
     default:
       return state;
@@ -22,16 +23,11 @@ const reducer = (state = initialState, action = {}) => {
 };
 
 // - Actions Creators
-export const changeInput = (value) => ({
-  type: CHANGE_INPUT,
+export const changeValue = (value) => ({
+  type: CHANGE_VALUE,
   value,
 });
 
-export const connectUser = () => ({
-  type: CONNECT_USER,
-});
-
-// - Selectors
 
 // - Export
 export default reducer;
