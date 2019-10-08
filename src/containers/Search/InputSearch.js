@@ -16,8 +16,8 @@ const mapStateToProps = (state) => ({
 /* === Actions === */
 const mapDispatchToProps = (dispatch) => ({
 
-    handleSubmit: (input) => {
-        const action =  searchRepos(input);
+    handleSubmit: () => {
+        const action =  searchRepos();
         dispatch(action);
       },
 

@@ -8,7 +8,7 @@ import Results from 'src/components/Search/Results';
 
 /* === State (données) === */
 const mapStateToProps = (state) => ({
-  repos: state.repos.repos,
+  repos: state.repos.reposFromAxiosResponse,
 });
 
 /* === Actions === */

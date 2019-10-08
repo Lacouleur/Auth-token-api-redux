@@ -1,13 +1,12 @@
 // - initialState
-import reposList from 'src/data/repos';
+
 
 const initialState = {
-  repos: reposList.items,
   favoris: [],
 };
 
 // - Actions Types
-const ADD_FAV = 'ADD_FAV';
+const ADD_FAV = 'ADD_FAV';const GET_REPOS_FROM_AXIOS = 'GET_REPOS_FROM_AXIOS'
 
 // - Reducer
 const reducer = (state = initialState, action = {}) => {
@@ -20,9 +19,10 @@ const reducer = (state = initialState, action = {}) => {
           action.id,
         ],
       };
-    default:
-      return state;
-  }
+
+      default:
+        return state;
+  };
 };
 
 // - Actions Creators
@@ -30,6 +30,7 @@ export const addFav = (id) => ({
   type: ADD_FAV,
   id,
 });
+
 
 // - Selectors
 export const isFav = (repos, id) => repos.includes(id);

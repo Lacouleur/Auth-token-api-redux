@@ -8,6 +8,7 @@ import user from './user';
 import repos from './repos';
 import form from './form';
 import InputSearch  from './InputSearch';
+import results from './results'
 
 // combineReducers nous retourne le reducer parent généré
 // on doit fournir en paramètre un objet
@@ -19,6 +20,7 @@ const reducer = combineReducers({
   repos,
   form,
   InputSearch,
+  results,
 });
 
 export default reducer;

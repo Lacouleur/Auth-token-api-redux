@@ -29,8 +29,9 @@ export const changeValue = (value) => ({
   value,
 });
 
-export const searchRepos = () => ({
+export const searchRepos = (value) => ({
   type: SEARCH_REPOS, 
+
 })
 
 
