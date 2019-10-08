@@ -9,7 +9,7 @@ import { getReposFromAxios} from 'src/store/reducer/results'
 /*
 X 1 - On envoi la requete "SEARCH_REPOS" depuis le reducer InputSearch
 X 2 - On fait une requête Axios dans le middleware
-X 3 - On récupère la réponse d'axios dans le reducer repos.js 
+X 3 - On récupère la réponse d'axios dans le reducer results.js 
 X  4- l'action getReposFromAxios définit un state
 5- On recupère ce state dans le container de Results.js
 6- on prend la props, et on l'utilise dans le component Results.js
@@ -21,7 +21,6 @@ X  4- l'action getReposFromAxios définit un state
 const ajaxMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case SEARCH_REPOS: {
-      console.log(action);
       const state = store.getState();
       const repoToSearch = state.InputSearch.inputValue
       console.log(repoToSearch);

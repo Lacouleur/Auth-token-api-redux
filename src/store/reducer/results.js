@@ -1,7 +1,7 @@
 // - initialState
 const initialState = {
     reposFromAxiosResponse : []
-  };
+ };
 
 // - Actions Types
   const GET_REPOS_FROM_AXIOS = 'GET_REPOS_FROM_AXIOS'
@@ -15,15 +15,8 @@ const reducer = (state = initialState, action = {}) => {
         case GET_REPOS_FROM_AXIOS :
           return {
             ...state,
-            reposFromAxiosResponse : [
-              
-              action.id, 
-              action.url, 
-              action.name,
-              action.description,
-              action.owner
-              
-            ]
+            // toto: 'labiteapapa',
+            reposFromAxiosResponse : action.lightItems,
         };
 
         default:
@@ -33,13 +26,9 @@ const reducer = (state = initialState, action = {}) => {
   
   // - Actions Creators
   
-  export const getReposFromAxios = (id, url, name, description, owner) => ({
+  export const getReposFromAxios = (lightItems) => ({
     type: GET_REPOS_FROM_AXIOS, 
-    id,
-    url,
-    name,
-    description,
-    owner, //object
+   lightItems
   
   })
   

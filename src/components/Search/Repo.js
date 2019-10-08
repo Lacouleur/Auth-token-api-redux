@@ -1,10 +1,23 @@
 import React from 'react';
-import { Card } from 'semantic-ui-react';
+import { Card, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
-const Repo = ({ name, addFav, isFav }) => (
-  <Card onClick={addFav} fluid color={isFav ? 'yellow' : 'blue'} header={name} />
-);
+const Repo = ({description, name, owner, url, addFav, isFav }) => {
+  console.log(name)
+  return (
+
+    <Card color={isFav ? 'yellow' : 'blue'} onClick={addFav} >
+    <Image src={owner.avatar_url} wrapped ui={false} />
+    <Card.Content>
+      <Card.Header>{name}</Card.Header>
+      <Card.Description>
+        {description}
+        <a>{url}</a>
+      </Card.Description>
+    </Card.Content>
+  </Card>
+  );
+};
 
 Repo.propTypes = {
   name: PropTypes.string.isRequired,
@@ -13,3 +26,22 @@ Repo.propTypes = {
 };
 
 export default Repo;
+
+
+// id: repo.id,
+// url: repo.url,
+// name: repo.name,
+// description: repo.description,
+// owner: {
+//   login: repo.owner.login,
+//   avatar_url: repo.owner.avatar_url,
+// },
+
+// .cards {
+
+//   display : flexbox;
+//   flex-wrap: wrap;
+//   width:100%;
+//   justify-content : space-evenly;
+
+// }
