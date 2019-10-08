@@ -1,6 +1,6 @@
 // - initialState
 const initialState = {
-  tokenInput: '',
+  tokenInput: '63535622ff913a1c37312859b1be50666de3008e',
   InputSearch: '',
 };
 

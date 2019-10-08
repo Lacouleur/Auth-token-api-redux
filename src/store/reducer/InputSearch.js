@@ -7,6 +7,7 @@ const initialState = {
 
 // - Actions Types
 const CHANGE_VALUE = 'CHANGE_VALUE';
+export const SEARCH_REPOS = 'SEARCH_REPOS';
 
 
 // - Reducer
@@ -27,6 +28,10 @@ export const changeValue = (value) => ({
   type: CHANGE_VALUE,
   value,
 });
+
+export const searchRepos = () => ({
+  type: SEARCH_REPOS, 
+})
 
 
 // - Export

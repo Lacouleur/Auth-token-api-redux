@@ -3,6 +3,7 @@ import React from 'react';
 import { Button, Form, Segment } from 'semantic-ui-react';
 
 // token : 63535622ff913a1c37312859b1be50666de3008e
+// je suis la !
 
 class InputSearch  extends React.Component {
     // est déclenché quand le rendu dans le dom réel de ce composant est fait
@@ -17,18 +18,18 @@ class InputSearch  extends React.Component {
   
     render() {
       // dans un composant sous forme de classe on accède aux props via this.props
-      const { inputValue, handleInput, /*handleSubmit, loadingStatus*/ } = this.props;
+      const { inputValue, handleInput, handleSubmit /*, loadingStatus*/ } = this.props;
       console.log(handleInput);
 
      const handleChange = (event) => {
-        // console.log("consoleLOG de event.target.value : ", event.target.value);
+        //console.log("consoleLOG de event.target.value : ", event.target.value);
         const { value } = event.target;
         handleInput(value);
       }
 
       return (
         <Segment inverted>
-          <Form >
+          <Form onSubmit={handleSubmit} >
             <Form.Field>
               <input
                 // loading={true}
